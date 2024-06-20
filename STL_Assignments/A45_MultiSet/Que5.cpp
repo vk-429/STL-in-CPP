@@ -1,0 +1,27 @@
+#include<iostream>
+#include<set>
+using namespace std;
+
+int main()
+{   
+    multiset<int> ms;
+    ms.emplace(2);
+    ms.emplace(4);
+    ms.emplace(1);
+    ms.emplace(42);
+    ms.emplace(21);
+    ms.emplace(24);
+    if(ms.empty())
+        cout<<"Multiset is Empty\n";
+    else
+        cout<<"Multiset is not Empty\n";
+
+    
+    cout<<"Elements :- \n";
+    for(auto&x:ms)
+    {
+        cout<<x<<" ";
+    }
+    cout<<"\n";
+    return 0;
+}
