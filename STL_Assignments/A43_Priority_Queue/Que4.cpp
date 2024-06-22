@@ -25,7 +25,7 @@ int main()
     // OR
     pq2.emplace(68);
 
-    cout<<"Before Swapping :-\n\n";
+    cout<<"Before Swapping :-\n";
 
     cout<<"\nPQ1 ;-\nSize : "<<pq1.size()<<"\n";
     cout<<"Empty Status : "<<pq1.empty()<<"\n";
@@ -37,7 +37,7 @@ int main()
     
     pq1.swap(pq2);
 
-    cout<<"\nAfter Swapping :-\n\n";
+    cout<<"\nAfter Swapping :-\n";
 
     cout<<"\nPQ1 ;-\nSize : "<<pq1.size()<<"\n";
     cout<<"Empty Status : "<<pq1.empty()<<"\n";

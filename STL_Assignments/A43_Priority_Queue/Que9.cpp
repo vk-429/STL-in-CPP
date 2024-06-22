@@ -33,9 +33,11 @@ int main()
     {
         while(!q2.empty() && q1.top()>=q2.top())
             q2.pop();
+        if(q2.empty())
+            break;
         while(!q3.empty() && q2.top()>=q3.top())
             q3.pop();
-        if(q2.empty() || q3.empty())
+        if(q3.empty())
             break;
         else
         {

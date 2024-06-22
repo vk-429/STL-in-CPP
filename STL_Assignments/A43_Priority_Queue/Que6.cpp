@@ -14,7 +14,7 @@ int main()
     
     // OR
     pq.emplace(6);
-    cout<<"\nElements : :Min Heap : Lowest Priority at Top\n";
+    cout<<"\nElements : Min Heap : Lowest Priority at Top\n";
     while(!pq.empty())
     {
         cout<<pq.top()<<" ";
