@@ -13,10 +13,10 @@ int main()
     mp.emplace(1,"Vivek");
 
     map<int,string>::iterator it;
-    it=mp.find(1);
-    mp.erase(it);
-    mp.insert({1,"Papa"});
-
+    //it=mp.find(1);
+   // mp.erase(it);
+    //mp.insert({1,"Papa"});
+    mp[1] = "Papa";
     for(auto&x:mp)
         cout<<x.first<<" "<<x.second<<"\n";
     cout<<"\n";

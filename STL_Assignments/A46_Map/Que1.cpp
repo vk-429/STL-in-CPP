@@ -11,6 +11,7 @@ int main()
     mp.insert({3,"Sweta"});
     mp.insert({5,"Shreya"});
     mp.emplace(1,"Vivek");
+    mp[6]="Futureboy";
     for(auto&x:mp)
         cout<<x.first<<" "<<x.second<<"\n";
     cout<<"\n";
