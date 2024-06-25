@@ -14,9 +14,7 @@ int main()
     cout<<"Size = "<<ms.size()<<"\n";
     cout<<"Elements :- \n";
     for(auto&x:ms)
-    {
         cout<<x<<" ";
-    }
     cout<<"\n";
     return 0;
 }

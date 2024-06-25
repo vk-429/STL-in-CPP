@@ -22,7 +22,8 @@ int main()
     cout<<"\n";
     cout<<"Removing Only the 1st Occurence of "<<element<<"\n";
     multiset<int>::iterator it=ms.find(element);
-    ms.erase(it);
+    if(it!=ms.end())
+        ms.erase(it);
     cout<<"After Removing "<<element<<"\n";
     cout<<"Size = "<<ms.size()<<"\n";
     cout<<"Elements :-\n";

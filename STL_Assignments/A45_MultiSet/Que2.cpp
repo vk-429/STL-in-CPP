@@ -15,11 +15,10 @@ int main()
         cin>>x;
         ms.emplace(x);
     }
-    multiset<int>:: iterator it;
-    it=ms.end();
-    if(n>0)
-        it--;
-    if(it!=ms.end())
+    multiset<int>:: reverse_iterator it;
+    it=ms.rbegin();
+    
+    if(it!=ms.rend())
         cout<<"Theoritical Last Element = "<<*it<<"\n";
     else
         cout<<"\nMultiset is Empty!\n";
