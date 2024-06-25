@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<list>
 #include<utility>
 using namespace std;
 
@@ -18,17 +19,15 @@ int main()
         vec.push_back(make_pair(x,y));
     }
     int ans=0;
-    for(i=0;i<n-2;i++)
-    {
-        for(j=i+1;j<n-1;j++)
-        {
-            for(k=j+1;k<n;k++)
-            {
-                if(((vec[i].first!=vec[j].first) && (vec[j].first!=vec[k].first))||((vec[i].second!=vec[j].second) && (vec[j].second!=vec[k].second)))
-                    ans++;
-            }
-        }
+    list<int> l1,l2;
+    for(auto&x:vec)
+    {   
+        l1.push_front(x.first);
+        l2.push_front(x.second);
     }
+    l1.unique();
+    l2.unique();
+    int unique=max(l1.size(),l2.size());
     cout<<ans<<"\n";
     return 0;
 }
