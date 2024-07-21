@@ -20,6 +20,20 @@ int main()
                 cout<<arr[i]<<" "<<arr[j]<<" "<<*it<<"\n";
         }
     }
-
+    cout<<"\n";
+    unordered_set<int> s;
+    for(int i=0;i<size-1;i++)
+    {
+        for(int j=i+1;j<size;j++)
+        {
+            int diff = arr[j]-arr[i];
+            if(s.find(arr[i]-diff) != s.end())
+                cout<<arr[i]-diff<<" "<<arr[i]<<" "<<arr[j]<<"\n";
+            
+        }
+        s.emplace(arr[i]);
+    }
+    
+    
     return 0;
 }

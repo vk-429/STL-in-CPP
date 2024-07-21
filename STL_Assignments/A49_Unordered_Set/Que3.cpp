@@ -16,18 +16,15 @@ int main()
     for(int i=0;i<n;i++)
         us.emplace(arr[i]);
     int ans=0;
-    for(int i=0;i<n-2;i++)
+    for(int i=0;i<n-1;i++)
     {
-        for(int j=i+1;j<n-1;j++)
+        for(int j=i+1;j<n;j++)
         {
-            auto it=us.find(arr[i]+arr[j]);
-            if(it!=us.end())
-            {
-                if((arr[i]^arr[j]^*it) == 0)
-                    ans++;
-            }
+            int target = (arr[i]^arr[j]);
+            if(us.find(target) != us.end() && target != arr[i] && target != arr[j])
+                ans++;
         }
     }
-    cout<<ans<<"\n";
+    cout<<ans/3<<"\n";
     return 0;
 }
