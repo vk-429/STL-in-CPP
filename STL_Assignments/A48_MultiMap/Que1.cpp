@@ -161,12 +161,12 @@ int main()
     cout << "\n";
 
     // 5. extract
-    // cout << "Using extract to remove and display an element with key 1:\n";
-    // auto nh = mp3.extract(1);
-    // if (nh) {
-    //     cout << nh.key() << ": " << nh.mapped() << endl;  // Outputs: 1: Hello
-    // }
-    // cout << "\n";
+    cout << "Using extract to remove and display an element with key 1:\n";
+    auto nh = mp3.extract(1);
+    if (nh) {
+        cout << nh.key() << ": " << nh.mapped() << endl;  // Outputs: 1: Hello
+    }
+    cout << "\n";
 
     // 6. get_allocator
     cout << "Using get_allocator to allocate and construct a pair:\n";
